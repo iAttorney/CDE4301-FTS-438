@@ -27,3 +27,8 @@ body.lightbox-open{overflow:hidden}
 
 /* Chapter 6 landing page */
 .chapter-overview{max-width:850px}.chapter-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}.chapter-cards a{display:flex;flex-direction:column;gap:10px;padding:26px;border:1px solid var(--line);border-radius:12px;background:#f8fafc;color:var(--ink);transition:border-color .2s,transform .2s}.chapter-cards a:hover{border-color:var(--accent);transform:translateY(-2px);text-decoration:none}.chapter-cards strong{font-size:1.3rem}.chapter-cards a>span:last-child{color:var(--muted);font-size:.91rem;line-height:1.6}.chapter-page>.eyebrow{margin-bottom:14px}@media(max-width:650px){.chapter-cards{grid-template-columns:1fr}}
+
+.report-table{margin:28px 0 36px}.report-table figcaption{font-size:.9rem;color:var(--muted);margin-bottom:10px;text-align:center}.report-table figcaption strong{color:var(--ink)}.table-scroll{overflow-x:auto}.data-table{width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numeric:tabular-nums}.data-table th,.data-table td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}.data-table thead th{font-weight:700;color:#24384f;border-bottom:2px solid #c8d3df;white-space:normal;vertical-align:bottom}.data-table th[scope=row],.data-table thead th:first-child{text-align:left;font-weight:600;white-space:normal}.data-table .selected-row{background:#eef4fa}.data-table .selected-row th,.data-table .selected-row td{font-weight:700;color:var(--accent)}
+
+/* References list: IEEE-style entries with a hanging indent, in the report's body type. */
+.references ul{list-style:none;margin:0;padding:0}.references li{margin:0 0 14px;padding-left:2.6em;text-indent:-2.6em;overflow-wrap:anywhere}
