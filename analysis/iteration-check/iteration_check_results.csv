@@ -1,0 +1,11 @@
+label,run,last_iteration,Full-car downforce final (N),Full-car downforce settled at,Full-car downforce diff at 2000 (N),Full-car drag final (N),Full-car drag settled at,Full-car drag diff at 2000 (N)
+Cornering 1,Main3deg2nd240mm43deg3rd68deg110mm1650mmslot,3500,336.810,713,0.059,138.062,595,0.020
+Cornering 2,Main3deg2nd240mm41deg3rd64deg110mm1650mmslot,3500,322.812,728,-0.056,133.969,689,-0.019
+Cornering 3,Main3deg2nd240mm43deg3rd66deg110mm1850mmslot,2000,335.125,744,,137.005,648,
+Cornering 4,27_FW_base_1_cut_ep_strake_flat_ep_upper_inner_2_mod_sd_2.30,2255,326.586,747,-0.018,140.772,684,-0.001
+Cornering 5,27_FW_base_1_cut_ep_strake_flat_ep_upper_inner_2_mod_sd_2.23,2430,335.151,762,0.017,140.621,669,0.002
+Cornering 6,Main3deg2nd240mm41deg3rd64deg110mm1850mmslot7mmGurney,2000,333.160,765,,134.931,687,
+Cornering 7,FX63137_90T_new_ep_cut_slot_1.4_side_diff_v2.2_corner,3500,304.619,893,-0.044,140.617,614,-0.010
+Cornering 8,27_FW_main_aft_mod_cut_ep_strake_flat_ep_upper_cornering,3500,317.368,1032,-0.038,140.718,562,-0.047
+Cornering 9,27_Cornering_1.0,3500,322.068,1274,-0.054,141.753,575,-0.026
+Cornering 10,27_Cornering_Package_1,3500,335.781,1677,-0.015,137.783,680,0.025
