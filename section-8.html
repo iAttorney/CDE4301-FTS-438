@@ -1,20 +1,477 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CDE4301 Interim Report | Aerodynamics</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
-<link rel="stylesheet" href="./index.css">
-<script type="module" src="./components/image/image-component.js"></script>
-<link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
-<script src="./components/scroll-to-top/scroll-to-top.js"></script>
-</head><body><div class="layout"><aside class="sidebar"><a class="sidebar-brand" href="index.html">CDE4301 · Interim Report</a><button class="mobile-nav-toggle" type="button" aria-controls="sidebar-toc" aria-expanded="false" onclick="const s=this.closest('.sidebar');s.classList.toggle('open');this.setAttribute('aria-expanded',s.classList.contains('open'))">Contents ☰</button><nav class="table-of-content" id="sidebar-toc" aria-label="Table of contents"><h2>Table of Contents</h2><sl-tree><sl-tree-item expanded><a href="section-1.html">1. Introduction</a><sl-tree-item><a href="section-1.html#section-1-1">1.1 Formula SAE Competition</a></sl-tree-item><sl-tree-item><a href="section-1.html#section-1-2">1.2 NUS Formula SAE EV Team and Competition History</a></sl-tree-item><sl-tree-item><a href="section-1.html#section-1-3">1.3 Work Breakdown</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="section-2.html">2. Design Statement and Value Proposition</a><sl-tree-item><a href="section-2.html#section-2-1">2.1 Design Statement</a></sl-tree-item><sl-tree-item><a href="section-2.html#section-2-2">2.2 Value Proposition</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="section-3.html">3. Team Goal</a><sl-tree-item><a href="section-3.html#section-3-1">3.1 Project Background</a></sl-tree-item><sl-tree-item><a href="section-3.html#section-3-2">3.2 Aerodynamics Department Goals</a></sl-tree-item><sl-tree-item><a href="section-3.html#section-3-3">3.3 Performance and Simulation Objectives</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="section-4.html">4. Problem of Interest</a><sl-tree-item><a href="section-4.html#section-4-1">4.1 Asymmetrical Airflow During Cornering</a></sl-tree-item><sl-tree-item><a href="section-4.html#section-4-2">4.2 Simulation-to-Manufacturing Geometry Mismatch</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="section-5.html">5. Design Methodology</a><sl-tree-item><a href="section-5.html#section-5-1">5.1 CFD Geometry Preparation</a></sl-tree-item><sl-tree-item><a href="section-5.html#section-5-2">5.2 CFD Simulation Setup</a></sl-tree-item><sl-tree-item><a href="section-5.html#section-5-3">5.3 Simulation Data Processing</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="section-6.html">6. Design</a><sl-tree-item><a href="section-6-1.html#section-6-1">6.1 Front Wing</a><sl-tree-item><a href="section-6-1.html#section-6-1-1">6.1.1 Mainplane</a></sl-tree-item><sl-tree-item><a href="section-6-1.html#section-6-1-2">6.1.2 Flap Design and Airfoil Selection</a></sl-tree-item><sl-tree-item><a href="section-6-1.html#section-6-1-3">6.1.3 Pressure Distribution Comparison</a></sl-tree-item><sl-tree-item><a href="section-6-1.html#section-6-1-4">6.1.4 Cornering Performance Comparison</a></sl-tree-item></sl-tree-item><sl-tree-item><a href="section-6-2.html#section-6-2">6.2 Rear Wing</a><sl-tree-item><a href="section-6-2.html#section-6-2-1">6.2.1 Straight-Line Optimisation</a></sl-tree-item><sl-tree-item><a href="section-6-2.html#section-6-2-2">6.2.2 Cornering Optimisation</a></sl-tree-item><sl-tree-item><a href="section-6-2.html#section-6-2-3">6.2.3 Full-Car Performance Comparison</a></sl-tree-item></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="section-7.html">7. Manufacturing &amp; Prototyping</a><sl-tree-item><a href="section-7.html#section-7-1">7.1 Flat Panels</a></sl-tree-item><sl-tree-item><a href="section-7.html#section-7-2">7.2 Vacuum Infusion Manufacturing</a></sl-tree-item><sl-tree-item><a href="section-7.html#section-7-3">7.3 Rear Wing Elements and Front Wing Mainplane</a></sl-tree-item><sl-tree-item><a href="section-7.html#section-7-4">7.4 Front Wing Flaps</a></sl-tree-item><sl-tree-item><a href="section-7.html#section-7-5">7.5 Bonding of Elements</a></sl-tree-item></sl-tree-item><sl-tree-item expanded><a href="section-8.html" aria-current="page">8. Future Validation</a><sl-tree-item><a href="section-8.html#section-8-1">8.1 Rear Wing Loading Test</a></sl-tree-item><sl-tree-item><a href="section-8.html#section-8-2">8.2 Cotton Tuft Testing</a></sl-tree-item><sl-tree-item><a href="section-8.html#section-8-3">8.3 Pressure Validation</a></sl-tree-item><sl-tree-item><a href="section-8.html#section-8-4">8.4 Limitations and Future Work</a></sl-tree-item></sl-tree-item><sl-tree-item><a href="references.html">References</a></sl-tree-item><sl-tree-item expanded><a href="appendix.html">Appendices</a><sl-tree-item><a href="appendix.html#appendix-a">A. CFD Simulation Setup</a></sl-tree-item></sl-tree-item></sl-tree></nav></aside><main class="content"><section id="section-8"><h2>8. Future Validation</h2><section id="section-8-1"><h3>8.1 Rear Wing Loading Test</h3><p>Deflection testing was conducted on the Rear Wing main element to evaluate its structural response and simulate the aerodynamic downforce it generates. The element was mounted to a jig, and two dowel gauges were positioned under the wing to measure the deflection (Figure 19). To replicate this operational downforce, mass was added to the center of the element in 10 kg and 2.5 kg increments until a total test load of 25 kg was reached (Figure 20). This maximum applied mass was specifically chosen to accurately match the maximum aerodynamic downforce expected on the main element, which is estimated to be approximately 200 N.</p><div class="figure-comparison" role="group" aria-label="Comparison of Figures 19 and 20"><figure class="report-figure"><img src="assets/Screenshot%202026-11-13%20172802.png" alt="Rear-wing main element mounted on the test jig with two dial gauges underneath." loading="lazy"><figcaption><strong>Figure 19.</strong> Rear-wing main element mounted on the test jig, with two dial gauges positioned under the element to measure deflection.</figcaption></figure><figure class="report-figure"><img src="assets/Screenshot%202026-11-13%20172933.png" alt="Stacked weight plates loaded on the centre of the rear-wing main element." loading="lazy"><figcaption><strong>Figure 20.</strong> Rear-wing main element under the full 25 kg test load, applied at the centre of the element.</figcaption></figure></div><p>The set-up will be replicated in Ansys with a similar force applied to validate the material properties of our wings.</p><p>Deflection was measured in millimeters at two distinct points on the element: 10.7 cm and 34.5 cm from the car's left side. The measurements demonstrate a steady increase in structural deformation as the applied mass increases. At the maximum simulated load of 25 kg, the element exhibited a deflection of 0.86 mm at the 10.7 cm mark and a peak deflection of 1.49 mm at the 34.5 cm mark.</p><p>Table 5 lists the gauge readings at each load step, and Figure 21 plots deflection against applied load.</p><figure class="report-table"><figcaption><strong>Table 5.</strong> Measured deflection of the rear-wing main element at each load step. The start row is the gauge reading before any load was applied.</figcaption><div class="table-scroll"><table class="data-table"><thead><tr><th scope="col" rowspan="2">Applied mass (kg)</th><th scope="col" rowspan="2">Applied load (N)</th><th scope="colgroup" colspan="2" class="group-head">Deflection (mm)</th></tr><tr><th scope="col">10.7 cm from car left</th><th scope="col">34.5 cm from car left</th></tr></thead><tbody><tr class="reference-row"><th scope="row">0 (start)</th><td>0</td><td>0.04</td><td>&minus;0.10</td></tr><tr><th scope="row">10</th><td>98.1</td><td>0.44</td><td>0.60</td></tr><tr><th scope="row">12.5</th><td>122.6</td><td>0.51</td><td>0.74</td></tr><tr><th scope="row">15</th><td>147.2</td><td>0.58</td><td>0.91</td></tr><tr><th scope="row">17.5</th><td>171.7</td><td>0.63</td><td>1.05</td></tr><tr><th scope="row">20</th><td>196.2</td><td>0.71</td><td>1.19</td></tr><tr><th scope="row">22.5</th><td>220.7</td><td>0.80</td><td>1.36</td></tr><tr class="selected-row"><th scope="row">25 (maximum)</th><td>245.3</td><td>0.86</td><td>1.49</td></tr></tbody></table></div></figure><figure class="report-figure"><img src="assets/report-figure-rear-wing-deflection.png" alt="Line chart of rear-wing main element deflection against applied load at the two gauge positions, reaching 0.86 mm and 1.49 mm at 245 N." loading="lazy"><figcaption><strong>Figure 21.</strong> Deflection of the rear-wing main element against applied load at the two gauge positions. The dashed segments join the start readings to the first 10 kg step, with no readings in between. The vertical line marks the expected peak downforce on the main element.</figcaption></figure></section><section id="section-8-2"><h3>8.2 Cotton Tuft Testing</h3><p>Cotton tufts will be attached to the surfaces of the car to visualize the airflow over the aerodynamic package during on-track testing. The direction and behaviour of the tufts show whether the flow stays attached or separates, and whether it is smooth or turbulent. This allows us to compare the real airflow against the streamline patterns predicted in CFD.</p></section><section id="section-8-3"><h3>8.3 Pressure Validation</h3><p>A pressure scanner will be used to measure surface pressures at selected points on the car and validate the pressure distributions from our simulations. These readings will be compared directly with the surface pressure plots from StarCCM+. This will show how closely the simulation matches the manufactured car, and whether geometry deviations from manufacturing affect the aerodynamic performance. The results will give us more confidence in our CFD model and support better design decisions in the future.</p></section><section id="section-8-4"><h3>8.4 Limitations and Future Work</h3>
-<p><strong>Structural validation.</strong> Due to the nature of carbon fibre layups, the experimental data may not match the Ansys data right away. This test is therefore groundwork for future batches to continue experimenting. Once the validation is complete, load studies can be used to simulate the wing geometry under these loaded conditions and to see whether the deflection affects aerodynamic performance.</p>
-<p><strong>Mesh independence study.</strong> All CFD results in this report come from a single mesh, so it is not yet known how much they would change if the mesh were refined. This matters because several of the design improvements are small. The R27e rear wing raised full-car downforce by 1.3% (Section 6.2.3), the front-wing changes raised it by 2&ndash;4% (Section 6.1.4), and full-car drag changed by less than 1% in every case. A mesh independence study would solve the same baseline case on at least three systematically refined meshes, with a refinement ratio above 1.3 between neighbouring meshes, and track full-car downforce and drag on each [<a href="references.html#ref-5">5</a>]. The grid convergence index (GCI) method then gives an uncertainty band for each result, and Richardson extrapolation estimates the value the mesh is converging towards [<a href="references.html#ref-5">5</a>, <a href="references.html#ref-6">6</a>]. The same approach has been applied to Formula Student cars in STAR-CCM+ [<a href="references.html#ref-7">7</a>]. A design change smaller than this uncertainty band cannot be claimed as a real improvement. The study would also identify the coarsest mesh whose results stay within an acceptable tolerance of the finest mesh, which lowers the cost of every future simulation.</p>
-<p><strong>Reducing the number of iterations.</strong> A mesh independence study does not, by itself, reduce the number of iterations a simulation needs. It measures discretisation error, not iterative convergence, and a finer mesh can need more iterations rather than fewer. The ASME procedure also requires iterative convergence to be demonstrated before discretisation error is estimated [<a href="references.html#ref-5">5</a>]. Two further changes would target the iteration count directly:</p>
-<ol>
-<li><strong>Improving mesh quality.</strong> Highly skewed or non-orthogonal cells, abrupt changes in cell size and poor prism-layer transitions all slow convergence. Where residuals stay high in one region, local refinement can help [<a href="references.html#ref-8">8</a>]. Mesh quality metrics will be checked in STAR-CCM+, and poor cells near the wings, wheels and floor will be improved.</li>
-<li><strong>Monitor-based stopping criteria.</strong> Cornering simulations now run for a fixed 2000 iterations, which the check in Section 5.3 showed is comfortably enough for every cornering run tested. Residuals alone are not a reliable measure of convergence, so integrated forces should be monitored alongside them [<a href="references.html#ref-9">9</a>]. Stopping criteria on the downforce and drag monitors would end each simulation once their running averages reach an asymptotic limit [<a href="references.html#ref-9">9</a>], so that runs which settle early, as most cornering runs do by about 1000 iterations, stop early. The averaging window must be long enough to avoid stopping on a temporary plateau like the one seen in Cornering 10 (Section 5.3).</li>
-</ol>
-<p>If the force monitors keep oscillating because the flow around the car is genuinely unsteady, for example in the wakes of the wheels, no change to the mesh will make a steady solution settle. In that case, averaging over the final iterations, as is done now (Section 5.3), remains the right approach. The stopping criterion should then be applied to the running average, and the size of the oscillation should be reported alongside each result.</p>
-<!-- TODO: once done, add the mesh study results (cell counts, GCI for full-car downforce and drag) to Section 5. -->
-</section></section><nav class="page-nav" aria-label="Page navigation"><a href="section-7.html">← Previous</a><a href="references.html">Next →</a></nav></main></div><script src="./components/image/figure-lightbox.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CDE4301 Interim Report | Aerodynamics</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./components/image/image-component.js"></script>
+    <link
+      rel="stylesheet"
+      href="./components/scroll-to-top/scroll-to-top.css"
+    />
+    <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="sidebar-brand" href="index.html">CDE4301 · Interim Report</a
+        ><button
+          class="mobile-nav-toggle"
+          type="button"
+          aria-controls="sidebar-toc"
+          aria-expanded="false"
+          onclick="
+            const s = this.closest('.sidebar');
+            s.classList.toggle('open');
+            this.setAttribute('aria-expanded', s.classList.contains('open'));
+          "
+        >
+          Contents ☰
+        </button>
+        <nav
+          class="table-of-content"
+          id="sidebar-toc"
+          aria-label="Table of contents"
+        >
+          <h2>Table of Contents</h2>
+          <sl-tree
+            ><sl-tree-item expanded
+              ><a href="section-1.html">1. Introduction</a
+              ><sl-tree-item
+                ><a href="section-1.html#section-1-1"
+                  >1.1 Formula SAE Competition</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-1.html#section-1-2"
+                  >1.2 NUS Formula SAE EV Team and Competition History</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-1.html#section-1-3"
+                  >1.3 Work Breakdown</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="section-2.html"
+                >2. Design Statement and Value Proposition</a
+              ><sl-tree-item
+                ><a href="section-2.html#section-2-1"
+                  >2.1 Design Statement</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-2.html#section-2-2"
+                  >2.2 Value Proposition</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="section-3.html">3. Team Goal</a
+              ><sl-tree-item
+                ><a href="section-3.html#section-3-1"
+                  >3.1 Project Background</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-3.html#section-3-2"
+                  >3.2 Aerodynamics Department Goals</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-3.html#section-3-3"
+                  >3.3 Performance and Simulation Objectives</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="section-4.html">4. Problem of Interest</a
+              ><sl-tree-item
+                ><a href="section-4.html#section-4-1"
+                  >4.1 Asymmetrical Airflow During Cornering</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-4.html#section-4-2"
+                  >4.2 Simulation-to-Manufacturing Geometry Mismatch</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="section-5.html">5. Design Methodology</a
+              ><sl-tree-item
+                ><a href="section-5.html#section-5-1"
+                  >5.1 CFD Geometry Preparation</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-5.html#section-5-2"
+                  >5.2 CFD Simulation Setup</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-5.html#section-5-3"
+                  >5.3 Simulation Data Processing</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="section-6.html">6. Design</a
+              ><sl-tree-item
+                ><a href="section-6-1.html#section-6-1">6.1 Front Wing</a
+                ><sl-tree-item
+                  ><a href="section-6-1.html#section-6-1-1"
+                    >6.1.1 Mainplane</a
+                  ></sl-tree-item
+                ><sl-tree-item
+                  ><a href="section-6-1.html#section-6-1-2"
+                    >6.1.2 Flap Design and Airfoil Selection</a
+                  ></sl-tree-item
+                ><sl-tree-item
+                  ><a href="section-6-1.html#section-6-1-3"
+                    >6.1.3 Pressure Distribution Comparison</a
+                  ></sl-tree-item
+                ><sl-tree-item
+                  ><a href="section-6-1.html#section-6-1-4"
+                    >6.1.4 Cornering Performance Comparison</a
+                  ></sl-tree-item
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-6-2.html#section-6-2">6.2 Rear Wing</a
+                ><sl-tree-item
+                  ><a href="section-6-2.html#section-6-2-1"
+                    >6.2.1 Straight-Line Optimisation</a
+                  ></sl-tree-item
+                ><sl-tree-item
+                  ><a href="section-6-2.html#section-6-2-2"
+                    >6.2.2 Cornering Optimisation</a
+                  ></sl-tree-item
+                ><sl-tree-item
+                  ><a href="section-6-2.html#section-6-2-3"
+                    >6.2.3 Full-Car Performance Comparison</a
+                  ></sl-tree-item
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="section-7.html">7. Manufacturing &amp; Prototyping</a
+              ><sl-tree-item
+                ><a href="section-7.html#section-7-1"
+                  >7.1 Flat Panels</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-7.html#section-7-2"
+                  >7.2 Vacuum Infusion Manufacturing</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-7.html#section-7-3"
+                  >7.3 Rear Wing Elements and Front Wing Mainplane</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-7.html#section-7-4"
+                  >7.4 Front Wing Flaps</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-7.html#section-7-5"
+                  >7.5 Bonding of Elements</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="section-8.html" aria-current="page"
+                >8. Future Validation</a
+              ><sl-tree-item
+                ><a href="section-8.html#section-8-1"
+                  >8.1 Rear Wing Loading Test</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-8.html#section-8-2"
+                  >8.2 Cotton Tuft Testing</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-8.html#section-8-3"
+                  >8.3 Pressure Validation</a
+                ></sl-tree-item
+              ><sl-tree-item
+                ><a href="section-8.html#section-8-4"
+                  >8.4 Limitations and Future Work</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ><sl-tree-item
+              ><a href="references.html">References</a></sl-tree-item
+            ><sl-tree-item expanded
+              ><a href="appendix.html">Appendices</a
+              ><sl-tree-item
+                ><a href="appendix.html#appendix-a"
+                  >A. CFD Simulation Setup</a
+                ></sl-tree-item
+              ></sl-tree-item
+            ></sl-tree
+          >
+        </nav>
+      </aside>
+      <main class="content">
+        <section id="section-8">
+          <h2>8. Future Validation</h2>
+          <section id="section-8-1">
+            <h3>8.1 Rear Wing Loading Test</h3>
+            <p>
+              Deflection testing was conducted on the Rear Wing main element to
+              evaluate its structural response and simulate the aerodynamic
+              downforce it generates. The element was mounted to a jig, and two
+              dowel gauges were positioned under the wing to measure the
+              deflection (Figure 19). To replicate this operational downforce,
+              mass was added to the center of the element in 10 kg and 2.5 kg
+              increments until a total test load of 25 kg was reached (Figure
+              20). This maximum applied mass was specifically chosen to
+              accurately match the maximum aerodynamic downforce expected on the
+              main element, which is estimated to be approximately 200 N.
+            </p>
+            <div
+              class="figure-comparison"
+              role="group"
+              aria-label="Comparison of Figures 19 and 20"
+            >
+              <figure class="report-figure">
+                <img
+                  src="assets/Screenshot%202026-11-13%20172802.png"
+                  alt="Rear-wing main element mounted on the test jig with two dial gauges underneath."
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Figure 19.</strong> Rear-wing main element mounted on
+                  the test jig, with two dial gauges positioned under the
+                  element to measure deflection.
+                </figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img
+                  src="assets/Screenshot%202026-11-13%20172933.png"
+                  alt="Stacked weight plates loaded on the centre of the rear-wing main element."
+                  loading="lazy"
+                />
+                <figcaption>
+                  <strong>Figure 20.</strong> Rear-wing main element under the
+                  full 25 kg test load, applied at the centre of the element.
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              The set-up will be replicated in Ansys with a similar force
+              applied to validate the material properties of our wings.
+            </p>
+            <p>
+              Deflection was measured in millimeters at two distinct points on
+              the element: 10.7 cm and 34.5 cm from the car's left side. The
+              measurements demonstrate a steady increase in structural
+              deformation as the applied mass increases. At the maximum
+              simulated load of 25 kg, the element exhibited a deflection of
+              0.86 mm at the 10.7 cm mark and a peak deflection of 1.49 mm at
+              the 34.5 cm mark.
+            </p>
+            <p>
+              Table 5 lists the gauge readings at each load step, and Figure 21
+              plots deflection against applied load.
+            </p>
+            <figure class="report-table">
+              <figcaption>
+                <strong>Table 5.</strong> Measured deflection of the rear-wing
+                main element at each load step. The start row is the gauge
+                reading before any load was applied.
+              </figcaption>
+              <div class="table-scroll">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th scope="col" rowspan="2">Applied mass (kg)</th>
+                      <th scope="col" rowspan="2">Applied load (N)</th>
+                      <th scope="colgroup" colspan="2" class="group-head">
+                        Deflection (mm)
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col">10.7 cm from car left</th>
+                      <th scope="col">34.5 cm from car left</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="reference-row">
+                      <th scope="row">0 (start)</th>
+                      <td>0</td>
+                      <td>0.04</td>
+                      <td>&minus;0.10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">10</th>
+                      <td>98.1</td>
+                      <td>0.44</td>
+                      <td>0.60</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">12.5</th>
+                      <td>122.6</td>
+                      <td>0.51</td>
+                      <td>0.74</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">15</th>
+                      <td>147.2</td>
+                      <td>0.58</td>
+                      <td>0.91</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">17.5</th>
+                      <td>171.7</td>
+                      <td>0.63</td>
+                      <td>1.05</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">20</th>
+                      <td>196.2</td>
+                      <td>0.71</td>
+                      <td>1.19</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">22.5</th>
+                      <td>220.7</td>
+                      <td>0.80</td>
+                      <td>1.36</td>
+                    </tr>
+                    <tr class="selected-row">
+                      <th scope="row">25 (maximum)</th>
+                      <td>245.3</td>
+                      <td>0.86</td>
+                      <td>1.49</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+            <figure class="report-figure">
+              <img
+                src="assets/report-figure-rear-wing-deflection.png"
+                alt="Line chart of rear-wing main element deflection against applied load at the two gauge positions, reaching 0.86 mm and 1.49 mm at 245 N."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure 21.</strong> Deflection of the rear-wing main
+                element against applied load at the two gauge positions. The
+                dashed segments join the start readings to the first 10 kg step,
+                with no readings in between. The vertical line marks the
+                expected peak downforce on the main element.
+              </figcaption>
+            </figure>
+          </section>
+          <section id="section-8-2">
+            <h3>8.2 Cotton Tuft Testing</h3>
+            <p>
+              Cotton tufts will be attached to the surfaces of the car to
+              visualize the airflow over the aerodynamic package during on-track
+              testing. The direction and behaviour of the tufts show whether the
+              flow stays attached or separates, and whether it is smooth or
+              turbulent. This allows us to compare the real airflow against the
+              streamline patterns predicted in CFD.
+            </p>
+          </section>
+          <section id="section-8-3">
+            <h3>8.3 Pressure Validation</h3>
+            <p>
+              A pressure scanner will be used to measure surface pressures at
+              selected points on the car and validate the pressure distributions
+              from our simulations. These readings will be compared directly
+              with the surface pressure plots from StarCCM+. This will show how
+              closely the simulation matches the manufactured car, and whether
+              geometry deviations from manufacturing affect the aerodynamic
+              performance. The results will give us more confidence in our CFD
+              model and support better design decisions in the future.
+            </p>
+          </section>
+          <section id="section-8-4">
+            <h3>8.4 Limitations and Future Work</h3>
+            <p>
+              <strong>Structural validation.</strong> Due to the nature of
+              carbon fibre layups, the experimental data may not match the Ansys
+              data right away. This test is therefore groundwork for future
+              batches to continue experimenting. Once the validation is
+              complete, load studies can be used to simulate the wing geometry
+              under these loaded conditions and to see whether the deflection
+              affects aerodynamic performance.
+            </p>
+            <p>
+              <strong>Mesh independence study.</strong> All CFD results in this
+              report come from a single mesh, so it is not yet known how much
+              they would change if the mesh were refined. This matters because
+              several of the design improvements are small. The R27e rear wing
+              raised full-car downforce by 1.3% (Section 6.2.3), the front-wing
+              changes raised it by 2&ndash;4% (Section 6.1.4), and full-car drag
+              changed by less than 1% in every case. A mesh independence study
+              would solve the same baseline case on at least three
+              systematically refined meshes, with a refinement ratio above 1.3
+              between neighbouring meshes, and track full-car downforce and drag
+              on each [<a href="references.html#ref-5">5</a>]. The grid
+              convergence index (GCI) method then gives an uncertainty band for
+              each result, and Richardson extrapolation estimates the value the
+              mesh is converging towards [<a href="references.html#ref-5">5</a>,
+              <a href="references.html#ref-6">6</a>]. The same approach has been
+              applied to Formula Student cars in STAR-CCM+ [<a
+                href="references.html#ref-7"
+                >7</a
+              >]. A design change smaller than this uncertainty band cannot be
+              claimed as a real improvement. The study would also identify the
+              coarsest mesh whose results stay within an acceptable tolerance of
+              the finest mesh, which lowers the cost of every future simulation.
+            </p>
+            <p>
+              <strong>Reducing the number of iterations.</strong> A mesh
+              independence study does not, by itself, reduce the number of
+              iterations a simulation needs. It measures discretisation error,
+              not iterative convergence, and a finer mesh can need more
+              iterations rather than fewer. The ASME procedure also requires
+              iterative convergence to be demonstrated before discretisation
+              error is estimated [<a href="references.html#ref-5">5</a>]. Two
+              further changes would target the iteration count directly:
+            </p>
+            <ol>
+              <li>
+                <strong>Improving mesh quality.</strong> Highly skewed or
+                non-orthogonal cells, abrupt changes in cell size and poor
+                prism-layer transitions all slow convergence. Where residuals
+                stay high in one region, local refinement can help [<a
+                  href="references.html#ref-8"
+                  >8</a
+                >]. Mesh quality metrics will be checked in STAR-CCM+, and poor
+                cells near the wings, wheels and floor will be improved.
+              </li>
+              <li>
+                <strong>Monitor-based stopping criteria.</strong> Cornering
+                simulations now run for a fixed 2000 iterations, which the check
+                in Section 5.3 showed is comfortably enough for every cornering
+                run tested. Residuals alone are not a reliable measure of
+                convergence, so integrated forces should be monitored alongside
+                them [<a href="references.html#ref-9">9</a>]. Stopping criteria
+                on the downforce and drag monitors would end each simulation
+                once their running averages reach an asymptotic limit [<a
+                  href="references.html#ref-9"
+                  >9</a
+                >], so that runs which settle early, as most cornering runs do
+                by about 1000 iterations, stop early. The averaging window must
+                be long enough to avoid stopping on a temporary plateau like the
+                one seen in Cornering 10 (Section 5.3).
+              </li>
+            </ol>
+            <p>
+              If the force monitors keep oscillating because the flow around the
+              car is genuinely unsteady, for example in the wakes of the wheels,
+              no change to the mesh will make a steady solution settle. In that
+              case, averaging over the final iterations, as is done now (Section
+              5.3), remains the right approach. The stopping criterion should
+              then be applied to the running average, and the size of the
+              oscillation should be reported alongside each result.
+            </p>
+            <!-- TODO: once done, add the mesh study results (cell counts, GCI for full-car downforce and drag) to Section 5. -->
+          </section>
+        </section>
+        <nav class="page-nav" aria-label="Page navigation">
+          <a href="section-7.html">← Previous</a
+          ><a href="references.html">Next →</a>
+        </nav>
+      </main>
+    </div>
+    <script src="./components/image/figure-lightbox.js" defer></script>
+  </body>
+</html>
