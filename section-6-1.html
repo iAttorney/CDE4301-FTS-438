@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>CDE4301 Interim Report | Aerodynamics</title>
     <link
       rel="stylesheet"
@@ -19,10 +23,19 @@
       href="./components/scroll-to-top/scroll-to-top.css"
     />
     <script src="./components/scroll-to-top/scroll-to-top.js"></script>
-  <script>if(window.top===window.self){window.location.replace("index.html?page=section-6-1.html"+(location.hash?"&anchor="+encodeURIComponent(location.hash.slice(1)):""));}</script></head>
+    <script>
+      if (window.top === window.self) {
+        window.location.replace(
+          "index.html?page=section-6-1.html" +
+            (location.hash
+              ? "&anchor=" + encodeURIComponent(location.hash.slice(1))
+              : ""),
+        );
+      }
+    </script>
+  </head>
   <body>
     <div class="layout chapter-layout">
-      
       <main class="content">
         <section class="chapter-page">
           <p class="eyebrow">Chapter 6 · Design</p>
@@ -69,7 +82,7 @@
               <p>
                 The R26e used flaps that were curved along the span. These
                 improved cornering performance but were difficult to manufacture
-                accurately (Section 7.4). For the R27e, the flaps were
+                accurately (Section 7.3). For the R27e, the flaps were
                 redesigned as straight sections, and the flap profiles were
                 re-selected so that downforce no longer depended on that
                 curvature. In cornering CFD, simplifying the flaps did not cost
@@ -83,20 +96,21 @@
                 wind-tunnel tests at Re = 2&times;10<sup>5</sup> it reached a
                 maximum lift coefficient of about 2.2, roughly 25% above earlier
                 high-lift airfoils such as the FX63-137
-                <a href="references.html?v=navfix-20261113#ref-1">[1]</a>. It achieves this with a
-                concave upper-surface pressure recovery and heavy aft loading,
-                accepting some trailing-edge separation as the cost
-                <a href="references.html?v=navfix-20261113#ref-1">[1]</a>. On the last element
-                this trade-off is acceptable, because no downstream element
-                depends on its wake. The S1223 is also one of the most widely
-                used high-lift profiles on Formula Student wings
+                <a href="references.html?v=navfix-20261113#ref-1">[1]</a>. It
+                achieves this with a concave upper-surface pressure recovery and
+                heavy aft loading, accepting some trailing-edge separation as
+                the cost
+                <a href="references.html?v=navfix-20261113#ref-1">[1]</a>. On
+                the last element this trade-off is acceptable, because no
+                downstream element depends on its wake. The S1223 is also one of
+                the most widely used high-lift profiles on Formula Student wings
                 <a href="references.html?v=navfix-20261113#ref-2">[2]</a>.
               </p>
               <p>
                 <strong>Intermediate flap: Wortmann FX63-137.</strong> The
                 FX63-137 has a lower peak lift (C<sub>l,max</sub> &asymp; 1.75
-                <a href="references.html?v=navfix-20261113#ref-1">[1]</a>), but it was chosen for
-                the intermediate flap for three reasons.
+                <a href="references.html?v=navfix-20261113#ref-1">[1]</a>), but
+                it was chosen for the intermediate flap for three reasons.
               </p>
               <ol>
                 <li>
@@ -104,10 +118,9 @@
                   trailing edge and the separation point moves forward
                   gradually, which leaves a flat plateau in the lift curve past
                   stall onset rather than a sharp drop
-                  <a href="references.html?v=navfix-20261113#ref-1">[1]</a>. A 2D analysis at a
-                  representative flap Reynolds number of 1.5&times;10<sup
-                    >5</sup
-                  >
+                  <a href="references.html?v=navfix-20261113#ref-1">[1]</a>. A
+                  2D analysis at a representative flap Reynolds number of
+                  1.5&times;10<sup>5</sup>
                   reproduces this (Figure 4): in the 4&deg; after peak lift, the
                   FX63-137 loses about 0.04 in C<sub>l</sub>, while the S1223
                   loses about 0.26. For an element whose wake feeds the final
@@ -129,7 +142,7 @@
                   against 8.7%). A thicker, less curved section is stiffer and
                   easier to lay up in a mould without the vacuum bag bridging or
                   the part distorting. This addresses the flap defects described
-                  in Section 7.4 and reduces the simulation-to-manufacturing
+                  in Section 7.3 and reduces the simulation-to-manufacturing
                   mismatch described in Section 4.2.
                 </li>
               </ol>
@@ -161,10 +174,11 @@
               <p>
                 One known drawback of the FX63-137 is stall hysteresis: once
                 stalled, it reattaches only at a noticeably lower angle of
-                attack <a href="references.html?v=navfix-20261113#ref-4">[4]</a>. The intermediate
-                flap is therefore set with a margin below its stall angle. The
-                choice was then checked in CFD of the full front wing (Sections
-                6.1.3 and 6.1.4).
+                attack
+                <a href="references.html?v=navfix-20261113#ref-4">[4]</a>. The
+                intermediate flap is therefore set with a margin below its stall
+                angle. The choice was then checked in CFD of the full front wing
+                (Sections 6.1.3 and 6.1.4).
               </p>
               <!-- TODO: replace Re = 1.5e5 with the actual flap Reynolds number (flap chord x design speed / 1.5e-5 m^2/s) if it differs. -->
             </section>

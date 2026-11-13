@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>CDE4301 Interim Report | Aerodynamics</title>
     <link
       rel="stylesheet"
@@ -19,10 +23,19 @@
       href="./components/scroll-to-top/scroll-to-top.css"
     />
     <script src="./components/scroll-to-top/scroll-to-top.js"></script>
-  <script>if(window.top===window.self){window.location.replace("index.html?page=section-8.html"+(location.hash?"&anchor="+encodeURIComponent(location.hash.slice(1)):""));}</script></head>
+    <script>
+      if (window.top === window.self) {
+        window.location.replace(
+          "index.html?page=section-8.html" +
+            (location.hash
+              ? "&anchor=" + encodeURIComponent(location.hash.slice(1))
+              : ""),
+        );
+      }
+    </script>
+  </head>
   <body>
     <div class="layout chapter-layout">
-      
       <main class="content">
         <section id="section-8">
           <h2>8. Future Validation</h2>
@@ -33,7 +46,7 @@
               evaluate its structural response and simulate the aerodynamic
               downforce it generates. The element was mounted to a jig, and two
               dial gauges were positioned under the wing to measure the
-              deflection (Figure 21). To replicate this operational downforce,
+              deflection (Figure 19). To replicate this operational downforce,
               mass was added to the center of the element in 10 kg and 2.5 kg
               increments until a total test load of 25 kg was reached (Figure
               20). This maximum applied mass was specifically chosen to
@@ -43,7 +56,7 @@
             <div
               class="figure-comparison"
               role="group"
-              aria-label="Comparison of Figures 21 and 22"
+              aria-label="Comparison of Figures 19 and 20"
             >
               <figure class="report-figure">
                 <img
@@ -52,7 +65,7 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  <strong>Figure 21.</strong> Rear-wing main element mounted on
+                  <strong>Figure 19.</strong> Rear-wing main element mounted on
                   the test jig, with two dial gauges positioned under the
                   element to measure deflection.
                 </figcaption>
@@ -64,7 +77,7 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  <strong>Figure 22.</strong> Rear-wing main element under the
+                  <strong>Figure 20.</strong> Rear-wing main element under the
                   full 25 kg test load, applied at the centre of the element.
                 </figcaption>
               </figure>
@@ -83,7 +96,7 @@
               the 34.5 cm mark.
             </p>
             <p>
-              Table 5 lists the gauge readings at each load step, and Figure 23
+              Table 5 lists the gauge readings at each load step, and Figure 21
               plots deflection against applied load.
             </p>
             <figure class="report-table">
@@ -167,7 +180,7 @@
                 loading="lazy"
               />
               <figcaption>
-                <strong>Figure 23.</strong> Deflection of the rear-wing main
+                <strong>Figure 21.</strong> Deflection of the rear-wing main
                 element against applied load at the two gauge positions. The
                 dashed segments join the start readings to the first 10 kg step,
                 with no readings in between. The vertical line marks the
@@ -176,7 +189,18 @@
             </figure>
           </section>
           <section id="section-8-2">
-            <h3>8.2 Cotton Tuft Testing</h3><figure class="report-figure"><img src="assets/Screenshot%202026-11-13%20224303.png" alt="Formula SAE car with cotton tufts attached to aerodynamic surfaces during on-track testing." loading="lazy"><figcaption><strong>Figure 24.</strong> Cotton tufts on the aerodynamic surfaces of the Formula SAE car for airflow visualisation.</figcaption></figure>
+            <h3>8.2 Cotton Tuft Testing</h3>
+            <figure class="report-figure">
+              <img
+                src="assets/Screenshot%202026-11-13%20224303.png"
+                alt="Formula SAE car with cotton tufts attached to aerodynamic surfaces during on-track testing."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure 22.</strong> Cotton tufts on the aerodynamic
+                surfaces of the Formula SAE car for airflow visualisation.
+              </figcaption>
+            </figure>
             <p>
               Cotton tufts will be attached to the surfaces of the car to
               visualize the airflow over the aerodynamic package during on-track
@@ -187,7 +211,18 @@
             </p>
           </section>
           <section id="section-8-3">
-            <h3>8.3 Pressure Validation</h3><figure class="report-figure"><img src="assets/Screenshot%202026-11-13%20224314.png" alt="Pressure measurement tubing and surface pressure taps on a carbon-fibre aerodynamic panel." loading="lazy"><figcaption><strong>Figure 25.</strong> Pressure measurement arrangement used to validate simulated surface-pressure distributions.</figcaption></figure>
+            <h3>8.3 Pressure Validation</h3>
+            <figure class="report-figure">
+              <img
+                src="assets/Screenshot%202026-11-13%20224314.png"
+                alt="Pressure measurement tubing and surface pressure taps on a carbon-fibre aerodynamic panel."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure 23.</strong> Pressure measurement arrangement
+                used to validate simulated surface-pressure distributions.
+              </figcaption>
+            </figure>
             <p>
               A pressure scanner will be used to measure surface pressures at
               selected points on the car and validate the pressure distributions
@@ -221,14 +256,15 @@
               would solve the same baseline case on at least three
               systematically refined meshes, with a refinement ratio above 1.3
               between neighbouring meshes, and track full-car downforce and drag
-              on each [<a href="references.html?v=navfix-20261113#ref-5">5</a>]. The grid
-              convergence index (GCI) method then gives an uncertainty band for
-              each result, and Richardson extrapolation estimates the value the
-              mesh is converging towards [<a href="references.html?v=navfix-20261113#ref-5">5</a>,
-              <a href="references.html?v=navfix-20261113#ref-6">6</a>]. The same approach has been
-              applied to Formula Student cars in STAR-CCM+ [<a
-                href="references.html?v=navfix-20261113#ref-7"
-                >7</a
+              on each [<a href="references.html?v=navfix-20261113#ref-5">5</a>].
+              The grid convergence index (GCI) method then gives an uncertainty
+              band for each result, and Richardson extrapolation estimates the
+              value the mesh is converging towards [<a
+                href="references.html?v=navfix-20261113#ref-5"
+                >5</a
+              >, <a href="references.html?v=navfix-20261113#ref-6">6</a>]. The
+              same approach has been applied to Formula Student cars in
+              STAR-CCM+ [<a href="references.html?v=navfix-20261113#ref-7">7</a
               >]. A design change smaller than this uncertainty band cannot be
               claimed as a real improvement. The study would also identify the
               coarsest mesh whose results stay within an acceptable tolerance of
@@ -241,8 +277,10 @@
               not iterative convergence, and a finer mesh can need more
               iterations rather than fewer. The ASME procedure also requires
               iterative convergence to be demonstrated before discretisation
-              error is estimated [<a href="references.html?v=navfix-20261113#ref-5">5</a>]. Two
-              further changes would target the iteration count directly:
+              error is estimated [<a
+                href="references.html?v=navfix-20261113#ref-5"
+                >5</a
+              >]. Two further changes would target the iteration count directly:
             </p>
             <ol>
               <li>
@@ -261,14 +299,13 @@
                 in Section 5.3 showed is comfortably enough for every cornering
                 run tested. Residuals alone are not a reliable measure of
                 convergence, so integrated forces should be monitored alongside
-                them [<a href="references.html?v=navfix-20261113#ref-9">9</a>]. Stopping criteria
-                on the downforce and drag monitors would end each simulation
-                once their running averages reach an asymptotic limit [<a
-                  href="references.html?v=navfix-20261113#ref-9"
-                  >9</a
-                >], so that runs which settle early, as most cornering runs do
-                by about 1000 iterations, stop early. The averaging window must
-                be long enough to avoid stopping on a temporary plateau like the
+                them [<a href="references.html?v=navfix-20261113#ref-9">9</a>].
+                Stopping criteria on the downforce and drag monitors would end
+                each simulation once their running averages reach an asymptotic
+                limit [<a href="references.html?v=navfix-20261113#ref-9">9</a>],
+                so that runs which settle early, as most cornering runs do by
+                about 1000 iterations, stop early. The averaging window must be
+                long enough to avoid stopping on a temporary plateau like the
                 one seen in Cornering 10 (Section 5.3).
               </li>
             </ol>

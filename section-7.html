@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>CDE4301 Interim Report | Aerodynamics</title>
     <link
       rel="stylesheet"
@@ -19,40 +23,24 @@
       href="./components/scroll-to-top/scroll-to-top.css"
     />
     <script src="./components/scroll-to-top/scroll-to-top.js"></script>
-  <script>if(window.top===window.self){window.location.replace("index.html?page=section-7.html"+(location.hash?"&anchor="+encodeURIComponent(location.hash.slice(1)):""));}</script></head>
+    <script>
+      if (window.top === window.self) {
+        window.location.replace(
+          "index.html?page=section-7.html" +
+            (location.hash
+              ? "&anchor=" + encodeURIComponent(location.hash.slice(1))
+              : ""),
+        );
+      }
+    </script>
+  </head>
   <body>
     <div class="layout chapter-layout">
-      
       <main class="content">
         <section id="section-7">
           <h2>7. Manufacturing &amp; Prototyping</h2>
           <section id="section-7-1">
-            <h3>7.1 Flat Panels</h3>
-            <figure class="report-figure">
-              <img
-                src="assets/report-figure-10.png"
-                alt="Composite layup schedules for aerodynamic components."
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>Figure 15.</strong> Composite layup schedules for
-                aerodynamic components.
-              </figcaption>
-            </figure>
-            <figure class="report-figure">
-              <img
-                src="assets/report-figure-11.png"
-                alt="Composite flat-panel layup configurations, flexural strengths and panel masses."
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>Figure 16.</strong> Composite flat-panel layup
-                configurations, flexural strengths and panel masses.
-              </figcaption>
-            </figure>
-          </section>
-          <section id="section-7-2">
-            <h3>7.2 Vacuum Infusion Manufacturing</h3>
+            <h3>7.1 Vacuum Infusion Manufacturing</h3>
             <figure class="report-figure">
               <img
                 src="assets/report-figure-12.png"
@@ -60,7 +48,7 @@
                 loading="lazy"
               />
               <figcaption>
-                <strong>Figure 17.</strong> Vacuum infusion setup for
+                <strong>Figure 15.</strong> Vacuum infusion setup for
                 manufacturing composite flat panels.
               </figcaption>
             </figure>
@@ -72,11 +60,14 @@
               with the mesh helping to allow it to flow evenly across the panel.
               The panel is then left to cure for 48 hours before the bag is
               removed. Next, we cut the panel to size before sending it out for
-              waterjet cutting into the parts that we require.
+              waterjet cutting into the parts that we require. The composite
+              layup schedules and flat-panel configurations are provided in
+              <a href="appendix.html?v=navfix-20261113#appendix-b">Appendix B</a
+              >.
             </p>
           </section>
-          <section id="section-7-3">
-            <h3>7.3 Rear Wing Elements and Front Wing Mainplane</h3>
+          <section id="section-7-2">
+            <h3>7.2 Rear Wing Elements and Front Wing Mainplane</h3>
             <p>
               These larger elements were made using a wet-layup. Two layers of
               carbon fiber were laminated with epoxy resin, then draped over a
@@ -91,7 +82,7 @@
                 loading="lazy"
               />
               <figcaption>
-                <strong>Figure 18.</strong> Weights placed on the wing-element
+                <strong>Figure 16.</strong> Weights placed on the wing-element
                 mould during curing.
               </figcaption>
             </figure>
@@ -100,8 +91,8 @@
               elements due to the relative affordability of EPS foam.
             </p>
           </section>
-          <section id="section-7-4">
-            <h3>7.4 Front Wing Flaps</h3>
+          <section id="section-7-3">
+            <h3>7.3 Front Wing Flaps</h3>
             <p>
               A female ABS mold was 3D printed. Prepreg Carbon Fiber was used
               for this.
@@ -117,23 +108,44 @@
               simpler geometry, which would make manufacturing less prone to
               failure and the finished part to be more accurate to the CAD.
             </p>
-            <section id="section-7-5">
-              <h3>7.5 Bonding of Elements</h3>
-              <figure class="report-figure"><img src="assets/Screenshot%202026-11-13%20220523.png" alt="Acrylic bonding jig positioning the wing internals and carbon support rods." loading="lazy"><figcaption><strong>Figure 19.</strong> Acrylic bonding jig holding the wing internals and carbon rods in alignment during bonding.</figcaption></figure>
-              <p>
-                An acrylic bonding jig was used to hold the internals in the
-                correct position while they were bonded. Its pieces are bolted
-                to one another, and a horizontal locking piece keeps them
-                aligned. The carbon rods that carry the internals are also
-                bolted to the jig, keeping the assembly accurate to the CAD.
-              </p>
-              <figure class="report-figure"><img src="assets/Screenshot%202026-11-13%20221111.png" alt="Weight plates clamping the carbon-fibre skin to the internal structure during epoxy curing." loading="lazy"><figcaption><strong>Figure 20.</strong> Carbon-fibre skin bonded to the internals, with weight plates providing clamping pressure during curing.</figcaption></figure>
-              <p>
-                The carbon fibre skin is bonded to the internals, and weight
-                plates are placed on top to apply even clamping pressure across
-                the bonding surfaces while the epoxy cures.
-              </p>
-            </section>
+          </section>
+          <section id="section-7-4">
+            <h3>7.4 Bonding of Elements</h3>
+            <figure class="report-figure">
+              <img
+                src="assets/Screenshot%202026-11-13%20220523.png"
+                alt="Acrylic bonding jig positioning the wing internals and carbon support rods."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure 17.</strong> Acrylic bonding jig holding the wing
+                internals and carbon rods in alignment during bonding.
+              </figcaption>
+            </figure>
+            <p>
+              An acrylic bonding jig was used to hold the internals in the
+              correct position while they were bonded. Its pieces are bolted to
+              one another, and a horizontal locking piece keeps them aligned.
+              The carbon rods that carry the internals are also bolted to the
+              jig, keeping the assembly accurate to the CAD.
+            </p>
+            <figure class="report-figure">
+              <img
+                src="assets/Screenshot%202026-11-13%20221111.png"
+                alt="Weight plates clamping the carbon-fibre skin to the internal structure during epoxy curing."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure 18.</strong> Carbon-fibre skin bonded to the
+                internals, with weight plates providing clamping pressure during
+                curing.
+              </figcaption>
+            </figure>
+            <p>
+              The carbon fibre skin is bonded to the internals, and weight
+              plates are placed on top to apply even clamping pressure across
+              the bonding surfaces while the epoxy cures.
+            </p>
           </section>
         </section>
         <nav class="page-nav" aria-label="Page navigation">
