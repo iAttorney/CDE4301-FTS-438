@@ -39,3 +39,5 @@ body.lightbox-open{overflow:hidden}
 @media(max-width:560px){.cad-label span{display:none}}
 @media(max-width:800px){.cad-viewer{aspect-ratio:4/3}.cad-label{font-size:.7rem;padding:4px 8px}.cad-label strong{font-size:.74rem}.work-breakdown{grid-template-columns:1fr}}
 .data-table .change-row th,.data-table .change-row td{font-weight:600;color:var(--muted);border-top:2px solid #c8d3df}
+.data-table .reference-row th,.data-table .reference-row td{color:var(--muted);font-style:italic;font-weight:400}.data-table thead .group-head{text-align:center;border-bottom:1px solid #c8d3df}
+.data-table thead tr+tr th:first-child{text-align:right}
