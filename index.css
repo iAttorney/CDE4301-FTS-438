@@ -41,3 +41,5 @@ body.lightbox-open{overflow:hidden}
 .data-table .change-row th,.data-table .change-row td{font-weight:600;color:var(--muted);border-top:2px solid #c8d3df}
 .data-table .reference-row th,.data-table .reference-row td{color:var(--muted);font-style:italic;font-weight:400}.data-table thead .group-head{text-align:center;border-bottom:1px solid #c8d3df}
 .data-table thead tr+tr th:first-child{text-align:right}
+
+.data-table.setup-table td,.data-table.setup-table thead th{text-align:left;white-space:normal}.data-table.setup-table th[scope=row]{width:42%}.data-table td.tbd{color:var(--muted);font-style:italic}
