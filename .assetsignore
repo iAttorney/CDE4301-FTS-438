@@ -1,6 +1,5 @@
 # Not part of the website: keep these out of the deployed assets.
 worker/
-functions/
 analysis/
 wrangler.jsonc
 .assetsignore

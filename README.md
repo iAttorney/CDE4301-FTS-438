@@ -27,5 +27,5 @@ To test locally: create a `.dev.vars` file containing `SITE_PASSWORD=choose-a-te
 
 Notes:
 - `.assetsignore` keeps repo-only files (`worker/`, `analysis/`, `README.md`, ...) out of the deployed site.
-- `functions/_middleware.js` is an equivalent entry point for a Cloudflare *Pages* project and is unused on Workers.
+- Do not add a `functions/` folder: Wrangler treats it as a Cloudflare *Pages* project and refuses to deploy.
 - This repository is public, so its source files are readable on GitHub regardless of the site password.
