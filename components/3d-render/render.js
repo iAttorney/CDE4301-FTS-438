@@ -56,7 +56,7 @@ function initViewer(container) {
 	container.prepend(renderer.domElement);
 
 	const scene = new THREE.Scene();
-	scene.background = new THREE.Color(0xf4f7fa);
+	scene.background = new THREE.Color(0xf5f7f9);
 	scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
 	const key = new THREE.DirectionalLight(0xffffff, 1.2);
 	key.position.set(1, 2, 1.5);
@@ -81,7 +81,7 @@ function initViewer(container) {
 
 	const anchors = []; // { label, point }
 	const meshes = [];
-	const fadeMaterial = new THREE.MeshStandardMaterial({ color: 0xc9d2db, transparent: true, opacity: 0.18, depthWrite: false });
+	const fadeMaterial = new THREE.MeshStandardMaterial({ color: 0xd0d5dc, transparent: true, opacity: 0.18, depthWrite: false });
 
 	function focus(node) {
 		labels.forEach((l) => l.classList.toggle("is-dimmed", node && l._node !== node));

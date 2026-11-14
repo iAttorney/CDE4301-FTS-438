@@ -27,23 +27,44 @@
   <body>
     <div class="layout">
       <aside class="sidebar">
-        <a
-          class="sidebar-brand"
-          href="index.html?v=navfix-20261113"
-          >CDE4301 · Interim Report</a
-        ><button
-          class="mobile-nav-toggle"
-          type="button"
-          aria-controls="sidebar-toc"
-          aria-expanded="false"
-          onclick="
-            const s = this.closest('.sidebar');
-            s.classList.toggle('open');
-            this.setAttribute('aria-expanded', s.classList.contains('open'));
-          "
-        >
-          Contents ☰
-        </button>
+        <div class="sidebar-header">
+          <a
+            class="sidebar-brand"
+            href="index.html?v=navfix-20261113"
+            aria-label="NUS Formula SAE — CDE4301 Interim Report Home"
+          >
+            <span class="sidebar-logos">
+              <img
+                class="sidebar-nus-logo"
+                src="./assets/NUS_logo_full-vertical.jpg"
+                alt="National University of Singapore"
+                width="751"
+                height="991"
+              />
+              <img
+                class="sidebar-logo"
+                src="./assets/FSAE%20Logo%20Black.png"
+                alt="NUS Formula SAE"
+                width="3384"
+                height="1391"
+              />
+            </span>
+            <span class="sidebar-brand-title">CDE4301 · Interim Report</span>
+          </a>
+          <button
+            class="mobile-nav-toggle"
+            type="button"
+            aria-controls="sidebar-toc"
+            aria-expanded="false"
+            onclick="
+              const s = this.closest('.sidebar');
+              s.classList.toggle('open');
+              this.setAttribute('aria-expanded', s.classList.contains('open'));
+            "
+          >
+            Contents ☰
+          </button>
+        </div>
         <nav
           class="table-of-content"
           id="sidebar-toc"
