@@ -189,6 +189,324 @@
               </figcaption>
             </figure>
           </section>
+          <section id="appendix-c">
+            <h3>Appendix C. Venturi Effect</h3>
+            <p>
+              When air flows through a narrowing passage, it speeds up and its
+              static pressure falls. This is the Venturi effect. It follows from
+              two conservation laws. At FSAE speeds the Mach number is below
+              0.1, so the air can be treated as incompressible
+              <a href="references.html?v=20261114-1#ref-10">[10]</a>.
+              Conservation of mass then requires the same volume flow rate
+              through every cross-section of the passage:
+            </p>
+            <div class="equation">
+              <span class="eq-body">A<sub>1</sub>v<sub>1</sub> =
+              A<sub>2</sub>v<sub>2</sub></span><span class="eq-no">(C1)</span>
+            </div>
+            <p>
+              so wherever the area A falls, the velocity v rises. Along a
+              streamline in steady flow, with friction neglected,
+              Bernoulli&rsquo;s equation states that the sum of static and
+              dynamic pressure stays constant
+              <a href="references.html?v=20261114-1#ref-10">[10]</a>:
+            </p>
+            <div class="equation">
+              <span class="eq-body">p<sub>1</sub> +
+              &frac12;&rho;v<sub>1</sub><sup>2</sup> = p<sub>2</sub> +
+              &frac12;&rho;v<sub>2</sub><sup>2</sup></span><span class="eq-no">(C2)</span>
+            </div>
+            <p>
+              Combining the two equations gives the pressure drop between the
+              inlet and the throat:
+            </p>
+            <div class="equation">
+              <span class="eq-body">p<sub>1</sub> &minus; p<sub>2</sub> =
+              &frac12;&rho;v<sub>1</sub><sup>2</sup> [
+              (A<sub>1</sub>/A<sub>2</sub>)<sup>2</sup> &minus; 1
+              ]</span><span class="eq-no">(C3)</span>
+            </div>
+            <p>
+              Figure C1 shows this in a Venturi tube. The streamlines bunch
+              together in the throat as the flow speeds up, and the manometer
+              columns show the static pressure falling there. In the diverging
+              section after the throat, the flow slows down again and the
+              pressure recovers. In a real tube the recovery is incomplete
+              because of friction, and if the expansion is too steep the
+              boundary layer separates from the wall and most of the recovery is
+              lost. As an example, at the 11.1 m/s cornering speed in Table A1,
+              halving the flow area (A<sub>1</sub>/A<sub>2</sub> = 2) gives an
+              ideal pressure drop of &frac12; &times; 1.225 &times;
+              11.1<sup>2</sup> &times; (2<sup>2</sup> &minus; 1) &asymp; 226 Pa.
+            </p>
+            <figure class="report-figure">
+              <img
+                src="assets/appendix-venturi.svg"
+                alt="Venturi tube with a converging section, a narrow throat and a longer diverging section. Streamlines bunch together and turn dark blue in the throat, showing faster flow. Three manometer tubes show the liquid level dropping at the throat and returning to the inlet level at the outlet."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure C1.</strong> Ideal (frictionless) flow through a
+                Venturi tube. Streamlines are coloured by local speed from
+                Equation C1, and the manometer columns show static pressure,
+                which is lowest in the throat (station 2) and recovers fully at
+                the outlet (station 3).
+              </figcaption>
+            </figure>
+            <p>
+              The same principle drives the underbody of a race car. The floor
+              and the road form a channel whose narrowest section lies under the
+              car. The diffuser at the rear is the diverging section: by
+              recovering pressure back to ambient at the exit, it lets the
+              pressure under the car fall further below ambient and draws more
+              air through the channel
+              <a href="references.html?v=20261114-1#ref-12">[12]</a>,
+              <a href="references.html?v=20261114-1#ref-13">[13]</a>. This
+              produces the diffuser and side-diffuser downforce reported in
+              Tables 2 and 3. As in a Venturi tube, a diffuser that expands too
+              quickly suffers flow separation and loses much of this effect. The
+              same idea applies on a smaller scale to the slot gaps between wing
+              elements and to the gap between the front wing and the ground
+              (Appendix D).
+            </p>
+          </section>
+          <section id="appendix-d">
+            <h3>Appendix D. Ground Effect</h3>
+            <p>
+              Ground effect is the change in aerodynamic forces on a body when
+              it runs close to the ground. For an inverted wing or a car
+              underbody, the ground limits how the air can flow beneath the
+              body, so the suction surface and the ground form a
+              converging&ndash;diverging channel like the Venturi tube in
+              Appendix C. The air speeds up through the gap, the pressure on the
+              suction surface falls further, and downforce increases
+              <a href="references.html?v=20261114-1#ref-12">[12]</a>.
+            </p>
+            <p>
+              Figure D1 shows this for an inverted NACA 4412 wing at 4&deg;,
+              calculated with an inviscid panel method. The ground is
+              represented by a mirror image of the wing, which is the inviscid
+              equivalent of a moving ground. At a ride height of h/c = 0.3, the
+              streamlines under the wing are squeezed together and the flow is
+              faster than in free air. The predicted downforce coefficient rises
+              from 0.99 to 1.74 (+76%). Figure D2a shows where the extra load
+              comes from: suction on the lower surface increases along the whole
+              chord, while the upper surface changes very little.
+            </p>
+            <figure class="report-figure">
+              <img
+                src="assets/appendix-ground-effect-flow.svg"
+                alt="Two streamline plots of an inverted wing. In free air the streamlines below the wing are moderately accelerated. Close to a moving ground the streamlines between the wing and the ground are squeezed together and coloured dark blue, showing much faster flow."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure D1.</strong> Streamlines around an inverted NACA
+                4412 at 4&deg; (a) in free air and (b) at h/c = 0.3 above a
+                moving ground, coloured by local speed. Inviscid panel-method
+                results; the downforce coefficients overpredict real values
+                close to the ground.
+              </figcaption>
+            </figure>
+            <p>
+              Downforce does not keep rising as the wing gets closer to the
+              ground. In wind-tunnel tests of a single-element wing in ground
+              effect, Zerihan and Zhang
+              <a href="references.html?v=20261114-1#ref-11">[11]</a> found that
+              downforce increased as the ride height was reduced to about 10% of
+              the chord. Below that height, downforce fell because the wing
+              stalled through trailing-edge separation of the boundary layer on
+              the suction surface. Moving the wing closer to the ground
+              strengthens the suction peak, which steepens the adverse pressure
+              gradient towards the trailing edge until the boundary layer can no
+              longer stay attached. Zhang et al.
+              <a href="references.html?v=20261114-1#ref-12">[12]</a> call the
+              region where downforce rises &ldquo;force enhancement&rdquo; and
+              the region below the maximum &ldquo;force reduction&rdquo; (Figure
+              D2b). An inviscid method cannot capture this separation, which is
+              why it overpredicts downforce close to the ground.
+            </p>
+            <figure class="report-figure">
+              <img
+                src="assets/appendix-ground-effect-cp.svg"
+                alt="Left: pressure coefficient plot showing larger suction on the lower surface of the inverted wing near the ground than in free air. Right: schematic curve of downforce against ride height, rising as ride height falls to a maximum near h/c of 0.1, then dropping sharply."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure D2.</strong> (a) Surface pressure coefficient for
+                the two cases in Figure D1 (inviscid panel method). (b)
+                Schematic of downforce against ride height for an inverted
+                single-element wing, based on
+                <a href="references.html?v=20261114-1#ref-11">[11]</a> and
+                <a href="references.html?v=20261114-1#ref-12">[12]</a>; not to
+                scale.
+              </figcaption>
+            </figure>
+            <p>
+              Ground effect matters for the FSAE car in three ways:
+            </p>
+            <ul>
+              <li>
+                The front wing runs close to the ground, so its downforce
+                depends on ride height. Pitch under braking and roll in
+                cornering change that height, and therefore the front wing load.
+              </li>
+              <li>
+                The floor and diffusers produce downforce through ground effect,
+                so their output also depends on ride height and on how cleanly
+                air reaches them. This is why the diffuser and side-diffuser
+                downforce is reported alongside the wing results in Section 6.
+              </li>
+              <li>
+                On track, the road does not move relative to the air, so there
+                is no ground boundary layer. The CFD therefore uses a moving
+                ground and rotating wheels (Table A1). A stationary ground would
+                grow a boundary layer that does not exist on track and would
+                distort the underbody flow
+                <a href="references.html?v=20261114-1#ref-12">[12]</a>.
+              </li>
+            </ul>
+          </section>
+          <section id="appendix-e">
+            <h3>Appendix E. How Airfoils Work</h3>
+            <p>
+              An airfoil is the cross-section of a wing, shaped to produce a
+              large force perpendicular to the oncoming flow (lift) for a small
+              force along it (drag). Figure E1 names its main features. The
+              <em>chord line</em> joins the leading edge to the trailing edge,
+              and its length is the chord c. The <em>mean camber line</em> lies
+              halfway between the upper and lower surfaces, and its maximum
+              distance from the chord line is the camber. The <em>angle of
+              attack</em> &alpha; is the angle between the chord line and the
+              freestream. The NACA 4412 used in these figures has 4% camber at
+              40% of the chord and a maximum thickness of 12% of the chord.
+            </p>
+            <figure class="report-figure">
+              <img
+                src="assets/appendix-airfoil-anatomy.svg"
+                alt="Cambered airfoil inclined at 8 degrees to a horizontal freestream, labelled with leading edge, trailing edge, chord line, mean camber line, upper and lower surfaces and angle of attack. Lift acts perpendicular to the freestream and drag parallel to it, combining into a resultant force."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure E1.</strong> Airfoil nomenclature and forces,
+                shown for a NACA 4412 at &alpha; = 8&deg;. Lift is perpendicular
+                to the freestream and drag is parallel to it; the drag arrow is
+                enlarged for clarity.
+              </figcaption>
+            </figure>
+            <h4>E.1 How lift is produced</h4>
+            <p>
+              An airfoil produces lift by turning the oncoming flow. Its camber
+              and angle of attack deflect the air downwards behind the trailing
+              edge (Figure E2a), and by Newton&rsquo;s third law the air pushes
+              the airfoil the opposite way. The same effect can be described in
+              terms of pressure. For air to follow a curved path, the pressure
+              must change across the streamlines, falling towards the centre of
+              curvature <a href="references.html?v=20261114-1#ref-14">[14]</a>.
+              Above the airfoil the streamlines curve around the upper surface,
+              so the pressure there falls below ambient; below the airfoil it
+              rises slightly above ambient. Bernoulli&rsquo;s equation (Equation
+              C2) links this to speed: the low-pressure regions are where the
+              flow is fastest, shown in blue in Figure E2a.
+            </p>
+            <p>
+              A common explanation, the &ldquo;equal transit time&rdquo; theory,
+              claims that air over the longer upper surface must speed up to
+              rejoin the air from the lower surface at the trailing edge. This
+              is false. Air over the upper surface actually reaches the trailing
+              edge well before the air below it, and nothing requires the two to
+              meet <a href="references.html?v=20261114-1#ref-14">[14]</a>.
+            </p>
+            <p>
+              The amount of lift is set by the sharp trailing edge. Viscosity
+              makes the flow leave the trailing edge smoothly from both surfaces
+              instead of wrapping around it. This is known as the Kutta
+              condition, and it fixes the circulation around the airfoil and
+              therefore the lift
+              <a href="references.html?v=20261114-1#ref-10">[10]</a>. The panel
+              method used for Figures D1, D2 and E2 applies this condition.
+            </p>
+            <figure class="report-figure">
+              <img
+                src="assets/appendix-airfoil-flow.svg"
+                alt="Top: streamlines around an airfoil at 6 degrees, fast (blue) over the upper surface and slow (orange) below and at the leading-edge stagnation point. Bottom: pressure coefficient plot with a large suction peak near the leading edge on the upper surface and small positive pressure on the lower surface."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure E2.</strong> NACA 4412 at &alpha; = 6&deg; from
+                an inviscid panel method (C<sub>L</sub> = 1.23): (a) streamlines
+                coloured by local speed and (b) surface pressure coefficient
+                C<sub>p</sub> = (p &minus;
+                p<sub>&infin;</sub>)/(&frac12;&rho;V<sub>&infin;</sub><sup>2</sup>).
+              </figcaption>
+            </figure>
+            <p>
+              Figure E2b plots the pressure coefficient around the surface. The
+              upper surface has a strong suction peak just behind the leading
+              edge, and most of the lift comes from this suction rather than
+              from overpressure on the lower surface. The area enclosed between
+              the two curves equals the lift coefficient.
+            </p>
+            <h4>E.2 Lift, drag and stall</h4>
+            <p>
+              Lift and drag are expressed as dimensionless coefficients based on
+              the dynamic pressure and a reference area S:
+            </p>
+            <div class="equation">
+              <span class="eq-body">L = &frac12;&rho;V<sup>2</sup>S
+              C<sub>L</sub>, &nbsp;&nbsp; D = &frac12;&rho;V<sup>2</sup>S
+              C<sub>D</sub></span><span class="eq-no">(E1)</span>
+            </div>
+            <p>
+              Both forces grow with the square of speed. The ratio
+              C<sub>L</sub>/C<sub>D</sub> measures aerodynamic efficiency, and
+              is the efficiency metric used for the full car in Section 6.
+              Thin-airfoil theory predicts that C<sub>L</sub> rises linearly
+              with angle of attack at about 2&pi; per radian (about 0.11 per
+              degree), and that camber shifts this line so that a cambered
+              airfoil already produces lift at &alpha; = 0
+              <a href="references.html?v=20261114-1#ref-10">[10]</a>.
+            </p>
+            <p>
+              The linear rise has a limit. Behind the suction peak the pressure
+              rises again towards the trailing edge, an adverse pressure
+              gradient that slows the boundary layer near the surface. As
+              &alpha; increases, the suction peak grows and this gradient
+              steepens until the boundary layer separates from the upper
+              surface. The airfoil then stalls: lift falls and drag rises
+              sharply.
+            </p>
+            <h4>E.3 Application to race-car wings</h4>
+            <p>
+              A race-car wing is an airfoil mounted upside down, so its lift
+              acts towards the ground as downforce. Downforce increases the
+              vertical load on the tyres, and so the grip available for
+              cornering, braking and acceleration, without adding mass
+              <a href="references.html?v=20261114-1#ref-13">[13]</a>. Three
+              features of FSAE wings follow from the airfoil behaviour described
+              above:
+            </p>
+            <ul>
+              <li>
+                <strong>High-lift, low-Reynolds-number airfoils.</strong> FSAE
+                cars run at low speeds, so airfoils such as the S1223
+                <a href="references.html?v=20261114-1#ref-1">[1]</a>, designed
+                for high lift at low Reynolds numbers, are used.
+              </li>
+              <li>
+                <strong>Multiple elements.</strong> A single element stalls at a
+                modest angle of attack. Splitting the wing into several elements
+                with slot gaps lets higher-pressure air from the pressure side
+                of one element flow onto the suction side of the next, so each
+                element starts with a fresh boundary layer and can run at a much
+                steeper angle without separating (Section 6.2.1).
+              </li>
+              <li>
+                <strong>Ground proximity.</strong> The front wing runs in ground
+                effect, which increases its downforce but makes it sensitive to
+                ride height (Appendix D).
+              </li>
+            </ul>
+          </section>
         </section>
         <nav class="page-nav" aria-label="Page navigation">
           <a href="references.html?v=20261114-1">← Previous</a

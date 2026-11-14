@@ -948,3 +948,24 @@ body.lightbox-open {
     padding: 32px 22px 90px;
   }
 }
+
+/* Display equations (appendices) */
+.equation {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin: 4px 0 20px;
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
+  font-size: 1.12rem;
+  overflow-x: auto;
+}
+.equation .eq-body {
+  margin-left: auto;
+  white-space: nowrap;
+}
+.equation .eq-no {
+  margin-left: auto;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
