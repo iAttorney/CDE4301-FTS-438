@@ -4,7 +4,7 @@
 // gate(request, env, next): `next()` must return the real (unprotected) response.
 // Runs before every request, so HTML, images, CSS and JS are all protected.
 // The password is NOT stored in this repository: set it as a secret named
-// SITE_PASSWORD in Cloudflare (see README.md). If the secret
+// SITE_PASSWORD in the Worker (see README.md). If the secret
 // is missing, the site refuses to serve anything rather than falling open.
 //
 // Flow: no valid cookie -> login page. Correct password -> signed HttpOnly
@@ -144,9 +144,18 @@ export async function gate(request, env, next) {
   const password = env.SITE_PASSWORD;
 
   if (!password) {
+    // Names only, never values: lets whoever deployed see what the running Worker actually has.
+    const names = Object.keys(env || {});
+    const present = names.includes("SITE_PASSWORD");
     return new Response(
-      "Password protection is not configured: set the SITE_PASSWORD secret in Cloudflare Pages.",
-      { status: 500, headers: { "Cache-Control": "no-store" } },
+      "Password protection is not configured.\n" +
+        "\n" +
+        (present
+          ? "SITE_PASSWORD exists on the running Worker but its value is empty. Re-enter the secret value.\n"
+          : "The running Worker has no binding named exactly SITE_PASSWORD.\n" +
+            "Add it as a Secret under the Worker's Settings > Variables and Secrets (not under Build), then deploy.\n") +
+        "\nBindings visible to this Worker: " + JSON.stringify(names) + "\n",
+      { status: 500, headers: { "Content-Type": "text/plain; charset=UTF-8", "Cache-Control": "no-store" } },
     );
   }
 
