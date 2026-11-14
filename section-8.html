@@ -42,21 +42,17 @@
           <section id="section-8-1">
             <h3>8.1 Rear Wing Loading Test</h3>
             <p>
-              Deflection testing was conducted on the Rear Wing main element to
-              evaluate its structural response and simulate the aerodynamic
-              downforce it generates. The element was mounted to a jig, and two
-              dial gauges were positioned under the wing to measure the
-              deflection (Figure 19). To replicate this operational downforce,
-              mass was added to the center of the element in 10 kg and 2.5 kg
-              increments until a total test load of 25 kg was reached (Figure
-              20). This maximum applied mass was specifically chosen to
-              accurately match the maximum aerodynamic downforce expected on the
-              main element, which is estimated to be approximately 200 N.
+              Deflection testing was conducted on the rear-wing main element to
+              evaluate its structural stiffness under aerodynamic load. Mounted
+              on a test jig with two dial gauges underneath (Figure 21), the
+              element was loaded centrally in 10 kg and 2.5 kg increments up to
+              25 kg (Figure 22), matching the expected ~200 N peak main-element
+              downforce.
             </p>
             <div
               class="figure-comparison"
               role="group"
-              aria-label="Comparison of Figures 19 and 20"
+              aria-label="Comparison of Figures 21 and 22"
             >
               <figure class="report-figure">
                 <img
@@ -65,9 +61,8 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  <strong>Figure 19.</strong> Rear-wing main element mounted on
-                  the test jig, with two dial gauges positioned under the
-                  element to measure deflection.
+                  <strong>Figure 21.</strong> Rear-wing main element on the test
+                  jig with two dial gauges underneath.
                 </figcaption>
               </figure>
               <figure class="report-figure">
@@ -77,27 +72,17 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  <strong>Figure 20.</strong> Rear-wing main element under the
-                  full 25 kg test load, applied at the centre of the element.
+                  <strong>Figure 22.</strong> Rear-wing main element under the
+                  25 kg central test load.
                 </figcaption>
               </figure>
             </div>
             <p>
-              The set-up will be replicated in Ansys with a similar force
-              applied to validate the material properties of our wings.
-            </p>
-            <p>
-              Deflection was measured in millimeters at two distinct points on
-              the element: 10.7 cm and 34.5 cm from the car's left side. The
-              measurements demonstrate a steady increase in structural
-              deformation as the applied mass increases. At the maximum
-              simulated load of 25 kg, the element exhibited a deflection of
-              0.86 mm at the 10.7 cm mark and a peak deflection of 1.49 mm at
-              the 34.5 cm mark.
-            </p>
-            <p>
-              Table 5 lists the gauge readings at each load step, and Figure 21
-              plots deflection against applied load.
+              This setup will be replicated in Ansys to validate the composite
+              material properties. Dial gauges at 10.7 cm and 34.5 cm from the
+              car&rsquo;s left side recorded steady deflection with increasing
+              mass, reaching 0.86 mm and 1.49 mm respectively at 25 kg (Table 5,
+              Figure 23).
             </p>
             <figure class="report-table">
               <figcaption>
@@ -180,11 +165,10 @@
                 loading="lazy"
               />
               <figcaption>
-                <strong>Figure 21.</strong> Deflection of the rear-wing main
-                element against applied load at the two gauge positions. The
-                dashed segments join the start readings to the first 10 kg step,
-                with no readings in between. The vertical line marks the
-                expected peak downforce on the main element.
+                <strong>Figure 23.</strong> Rear-wing main-element deflection
+                against applied load at both gauge positions; dashed lines link
+                0 kg to 10 kg, and the vertical line marks expected peak
+                downforce.
               </figcaption>
             </figure>
           </section>
@@ -197,17 +181,15 @@
                 loading="lazy"
               />
               <figcaption>
-                <strong>Figure 22.</strong> Cotton tufts on the aerodynamic
+                <strong>Figure 24.</strong> Cotton tufts on the aerodynamic
                 surfaces of the Formula SAE car for airflow visualisation.
               </figcaption>
             </figure>
             <p>
-              Cotton tufts will be attached to the surfaces of the car to
-              visualize the airflow over the aerodynamic package during on-track
-              testing. The direction and behaviour of the tufts show whether the
-              flow stays attached or separates, and whether it is smooth or
-              turbulent. This allows us to compare the real airflow against the
-              streamline patterns predicted in CFD.
+              Cotton tufts will be taped across the aerodynamic surfaces during
+              track testing to visualise local airflow. Tuft direction and
+              motion indicate attached versus separated or turbulent flow,
+              enabling direct comparison with CFD streamlines.
             </p>
           </section>
           <section id="section-8-3">
@@ -219,19 +201,15 @@
                 loading="lazy"
               />
               <figcaption>
-                <strong>Figure 23.</strong> Pressure measurement arrangement
+                <strong>Figure 25.</strong> Pressure measurement arrangement
                 used to validate simulated surface-pressure distributions.
               </figcaption>
             </figure>
             <p>
-              A pressure scanner will be used to measure surface pressures at
-              selected points on the car and validate the pressure distributions
-              from our simulations. These readings will be compared directly
-              with the surface pressure plots from StarCCM+. This will show how
-              closely the simulation matches the manufactured car, and whether
-              geometry deviations from manufacturing affect the aerodynamic
-              performance. The results will give us more confidence in our CFD
-              model and support better design decisions in the future.
+              A pressure scanner will record surface pressures at selected taps
+              across the car for direct comparison with STAR-CCM+ pressure
+              plots. This checks how closely simulations match the manufactured
+              car and whether build tolerances degrade aerodynamic performance.
             </p>
           </section>
           <section id="section-8-4">
@@ -319,6 +297,35 @@
               oscillation should be reported alongside each result.
             </p>
             <!-- TODO: once done, add the mesh study results (cell counts, GCI for full-car downforce and drag) to Section 5. -->
+          </section>
+          <section id="section-8-5">
+            <h3>8.5 Projected Working Timeline</h3>
+            <figure class="report-figure">
+              <img
+                src="assets/timeline.png"
+                alt="Gantt chart of the projected manufacturing, assembly and shakedown schedule from November 2026 Week 1 to February 2027 Week 2."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure 26.</strong> Projected manufacturing, assembly
+                and shakedown schedule from November 2026 to February 2027.
+              </figcaption>
+            </figure>
+            <p>
+              Figure 26 outlines the projected working timeline from November
+              2026 to February 2027. Work begins with two weeks of carbon-fibre
+              layup planning (Nov&nbsp;W1&ndash;W2), followed by six weeks of
+              flat-panel laying (Nov&nbsp;W3&ndash;Dec&nbsp;W4). Wing-element
+              carbon-fibre laying overlaps in Dec&nbsp;W3 and runs for five
+              weeks through Jan&nbsp;W3. Once the monocoque is received
+              (Dec&nbsp;W4&ndash;Jan&nbsp;W1), rear-wing clevis welding takes
+              place across Jan&nbsp;W1&ndash;W2. Composite post-processing spans
+              Jan&nbsp;W2&ndash;W4, feeding into element bonding
+              (Jan&nbsp;W3&ndash;W4) and insert machining
+              (Jan&nbsp;W4&ndash;Feb&nbsp;W1) to finalise mounting interfaces.
+              All assemblies converge for vehicle shakedown in Feb&nbsp;W2,
+              enabling subsequent on-track validation.
+            </p>
           </section>
         </section>
         <nav class="page-nav" aria-label="Page navigation">
