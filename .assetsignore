@@ -1,0 +1,12 @@
+# Not part of the website: keep these out of the deployed assets.
+worker/
+functions/
+analysis/
+wrangler.jsonc
+.assetsignore
+.dev.vars
+.wrangler/
+.gitignore
+.git
+AGENTS.md
+README.md
