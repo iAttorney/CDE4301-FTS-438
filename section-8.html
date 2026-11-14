@@ -234,15 +234,15 @@
               would solve the same baseline case on at least three
               systematically refined meshes, with a refinement ratio above 1.3
               between neighbouring meshes, and track full-car downforce and drag
-              on each [<a href="references.html?v=navfix-20261113#ref-5">5</a>].
+              on each [<a href="references.html?v=20261114-1#ref-5">5</a>].
               The grid convergence index (GCI) method then gives an uncertainty
               band for each result, and Richardson extrapolation estimates the
               value the mesh is converging towards [<a
-                href="references.html?v=navfix-20261113#ref-5"
+                href="references.html?v=20261114-1#ref-5"
                 >5</a
-              >, <a href="references.html?v=navfix-20261113#ref-6">6</a>]. The
+              >, <a href="references.html?v=20261114-1#ref-6">6</a>]. The
               same approach has been applied to Formula Student cars in
-              STAR-CCM+ [<a href="references.html?v=navfix-20261113#ref-7">7</a
+              STAR-CCM+ [<a href="references.html?v=20261114-1#ref-7">7</a
               >]. A design change smaller than this uncertainty band cannot be
               claimed as a real improvement. The study would also identify the
               coarsest mesh whose results stay within an acceptable tolerance of
@@ -256,7 +256,7 @@
               iterations rather than fewer. The ASME procedure also requires
               iterative convergence to be demonstrated before discretisation
               error is estimated [<a
-                href="references.html?v=navfix-20261113#ref-5"
+                href="references.html?v=20261114-1#ref-5"
                 >5</a
               >]. Two further changes would target the iteration count directly:
             </p>
@@ -266,7 +266,7 @@
                 non-orthogonal cells, abrupt changes in cell size and poor
                 prism-layer transitions all slow convergence. Where residuals
                 stay high in one region, local refinement can help [<a
-                  href="references.html?v=navfix-20261113#ref-8"
+                  href="references.html?v=20261114-1#ref-8"
                   >8</a
                 >]. Mesh quality metrics will be checked in STAR-CCM+, and poor
                 cells near the wings, wheels and floor will be improved.
@@ -277,10 +277,10 @@
                 in Section 5.3 showed is comfortably enough for every cornering
                 run tested. Residuals alone are not a reliable measure of
                 convergence, so integrated forces should be monitored alongside
-                them [<a href="references.html?v=navfix-20261113#ref-9">9</a>].
+                them [<a href="references.html?v=20261114-1#ref-9">9</a>].
                 Stopping criteria on the downforce and drag monitors would end
                 each simulation once their running averages reach an asymptotic
-                limit [<a href="references.html?v=navfix-20261113#ref-9">9</a>],
+                limit [<a href="references.html?v=20261114-1#ref-9">9</a>],
                 so that runs which settle early, as most cornering runs do by
                 about 1000 iterations, stop early. The averaging window must be
                 long enough to avoid stopping on a temporary plateau like the
@@ -320,12 +320,12 @@
           </section>
         </section>
         <nav class="page-nav" aria-label="Page navigation">
-          <a href="section-7.html?v=navfix-20261113">← Previous</a
-          ><a href="references.html?v=navfix-20261113">Next →</a>
+          <a href="section-7.html?v=20261114-1">← Previous</a
+          ><a href="references.html?v=20261114-1">Next →</a>
         </nav>
       </main>
     </div>
     <script src="./components/image/figure-lightbox.js" defer></script>
-    <script src="./components/navigation/shared-navigation.js" defer></script>
+    <script src="./components/navigation/shared-navigation.js?v=20261114-1" defer></script>
   </body>
 </html>

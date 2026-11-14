@@ -2,6 +2,7 @@
 // Chapter links navigate the named iframe, leaving Shoelace tree state and
 // sidebar scroll position untouched.
 (() => {
+  const CACHE_VERSION = "20261114-1";
   const allowed = /^(?:references|appendix|section-[0-9]+(?:-[0-9]+)?)\.html$/;
   const frame = document.getElementById("report-frame");
   const sidebar = document.querySelector(".sidebar");
@@ -33,7 +34,7 @@
 
     const brand = sidebarEl.querySelector(".sidebar-brand");
     if (brand) {
-      brand.href = "index.html";
+      brand.href = "index.html?v=" + CACHE_VERSION;
       brand.removeAttribute("aria-current");
     }
 
@@ -137,7 +138,11 @@
     const requested = params.get("page");
     const anchor = params.get("anchor");
     if (requested && allowed.test(requested)) {
-      const targetSrc = requested + (anchor ? "#" + encodeURIComponent(anchor) : "");
+      const targetSrc =
+        requested +
+        "?v=" +
+        CACHE_VERSION +
+        (anchor ? "#" + encodeURIComponent(anchor) : "");
       if (requested !== "section-1.html" || anchor) {
         frameEl.src = targetSrc;
       }
