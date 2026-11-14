@@ -3,6 +3,7 @@
   "name": "cde4301-fts-438",
   "main": "worker/index.js",
   "compatibility_date": "2026-01-01",
+  "keep_vars": true,
   "assets": {
     "directory": ".",
     "binding": "ASSETS",

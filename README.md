@@ -15,7 +15,8 @@ Setup (one time):
 1. Cloudflare dashboard > Workers & Pages > Create application > Import a repository, and select this repository.
    Project name `cde4301-fts-438` (must match `name` in `wrangler.jsonc`); leave the build command empty;
    the default deploy command (`npx wrangler deploy`) is correct.
-2. Project > Settings > Variables and Secrets > add a **Secret** named `SITE_PASSWORD`.
+2. Worker > Settings > **Variables and Secrets** (the top-level one, NOT the one under *Build*, which the running Worker
+   cannot see) > add a variable named exactly `SITE_PASSWORD`, type **Secret**, then save and deploy.
 3. Redeploy. The `*.workers.dev` URL should now show the sign-in page.
 4. Disable GitHub Pages for this repository (Settings > Pages), otherwise the unprotected copy stays online.
 
