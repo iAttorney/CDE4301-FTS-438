@@ -1,10 +1,10 @@
-"""Regenerate the rear-wing and full-car comparison bar charts (Figures 8, 11, 14).
+"""Regenerate the rear-wing and full-car comparison bar charts (Figures 9, 12, 15).
 
 All numbers are read from the tables in section-6-2.html, so the charts always
 match the report:
-    Table 2 -> Figure 8   assets/report-figure-rear-wing-straight.png
-    Table 3 -> Figure 11  assets/report-figure-rear-wing-cornering.png
-    Table 4 -> Figure 14  assets/report-figure-full-car-comparison.png
+    Table 2 -> Figure 9   assets/report-figure-rear-wing-straight.png
+    Table 3 -> Figure 12  assets/report-figure-rear-wing-cornering.png
+    Table 4 -> Figure 15  assets/report-figure-full-car-comparison.png
 
 Percentage changes in C_L/C_D are computed from the downforce and drag columns
 (not from the rounded C_L/C_D column), so they agree with the text.
@@ -204,7 +204,7 @@ def full_car_figure(rows):
     P += panel(731, 966, top, bottom, ratio, sel,
                [f"{ratio[0]:.2f}", f"{ratio[1]:.2f} ({signed(ch(ratio), 1, '%')})"],
                "(c) Full-car " + clcd(16), clcd(14), 2, fixed=(0, 3.5, 1), label_bold_selected=True)
-    print(f"  Figure 14: CL/CD {ratio[0]:.3f} -> {ratio[1]:.3f} ({ch(ratio):+.2f}%), "
+    print(f"  Figure 15: CL/CD {ratio[0]:.3f} -> {ratio[1]:.3f} ({ch(ratio):+.2f}%), "
           f"downforce {ch(vals_df):+.2f}%, drag {ch(vals_dr):+.2f}%")
     return svg(W, H, P, "Full-car comparison of the baseline R26e and the R27e")
 
@@ -246,9 +246,9 @@ def main():
     straight, corner, full = t[0], t[1], t[2]
     figs = [
         ("report-figure-rear-wing-straight.png", 1010, 460,
-         delta_figure(straight, split_straight, 460, "Figure 8", "Rear-wing downforce (N)")),
+         delta_figure(straight, split_straight, 460, "Figure 9", "Rear-wing downforce (N)")),
         ("report-figure-rear-wing-cornering.png", 1010, 540,
-         delta_figure(corner, split_cornering, 540, "Figure 11", "Rear-wing downforce (N)")),
+         delta_figure(corner, split_cornering, 540, "Figure 12", "Rear-wing downforce (N)")),
         ("report-figure-full-car-comparison.png", 1010, 260, full_car_figure(full)),
     ]
     tmp = tempfile.mkdtemp(prefix="report-figs-")

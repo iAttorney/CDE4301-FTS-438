@@ -1,6 +1,6 @@
 # Iteration convergence check (cornering simulations)
 
-`iteration_check.py` produces Figure 1 and the numbers in Section 5.3 of the report.
+`iteration_check.py` produces Figure 3 and the numbers in Section 5.3 of the report.
 
 For each Star-CCM+ monitor CSV in a folder, it finds the earliest iteration after which the
 rolling 300-iteration mean of **full-car downforce** and **full-car drag** stays within ±1% of the
@@ -24,7 +24,7 @@ CSVs whose first column is not numeric are skipped.
 ## Data used in the report
 
 The 10 cornering runs below (about 3–6 MB each, not stored in this repo). Their results are in
-`iteration_check_results.csv`, where `label` matches the run names in Figure 1.
+`iteration_check_results.csv`, where `label` matches the run names in Figure 3.
 
 - 27_Cornering_1.0
 - 27_Cornering_Package_1
