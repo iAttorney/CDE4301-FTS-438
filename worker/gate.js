@@ -79,7 +79,7 @@ function loginPage(next, errorMessage) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Sign in | CDE4301 Interim Report</title>
+    <title>Sign in | FTS 438</title>
     <script>
       // If the session expired while a chapter was open in the report's iframe,
       // show the login page full-window instead of inside the frame.
@@ -116,7 +116,7 @@ function loginPage(next, errorMessage) {
   </head>
   <body>
     <main>
-      <p class="eyebrow">CDE4301 &middot; Interim Report</p>
+      <p class="eyebrow">FTS 438 &middot; Design &amp; Optimization of the Aerodynamics system for FSAE</p>
       <h1>This report is password protected</h1>
       <p>Enter the password to continue.</p>
       ${errorMessage ? `<div class="error" role="alert">${escapeHtml(errorMessage)}</div>` : ""}

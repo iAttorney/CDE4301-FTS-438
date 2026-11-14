@@ -131,6 +131,15 @@ a:hover {
   color: var(--muted);
 }
 
+.sidebar-brand-subtitle {
+  display: block;
+  margin-top: -6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink-strong);
+}
+
 .sidebar .table-of-content h2 {
   font-size: 0.9rem;
   color: var(--muted);
@@ -335,6 +344,10 @@ section {
     height: 31px;
     max-width: none;
     flex-shrink: 0;
+  }
+
+  .sidebar-brand-subtitle {
+    display: none;
   }
 
   .sidebar-brand-title {
